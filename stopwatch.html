@@ -6,15 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="stopwatch.css"> -->
+    <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css"> -->
 </head>
 <body>
-
     <section>
-        <div style="background-color: white; height: 20vh;"></div>
-        <div style="background-color: #7c4cc4; height: 80vh;"></div>
+        <div style="background-color: white; height: 15vh;"></div>
+        <div style="background-color: #7c4cc4; height: 85vh;">
+            <div style="display: flex; justify-content: space-evenly; padding-top: 85px;">
+                <section style="width: 25%;">
+                    <div style="background-color: white; height: 10vh;"></div>
+                    <div style="background-color: #9559cb; height: 55vh;">
+                        <div style=" display: flex; padding-top: 100px; gap: 5px; justify-content: center;" id="newInput">
+                            <input type="text" placeholder="00" disabled id="myMinutes">
+                            <span>:</span>
+                            <input type="text" placeholder="00" disabled id="mySeconds">
+                            <span>:</span>
+                            <input type="text" placeholder="00" disabled id="myMilliseconds">
+                        </div>
+                        <div style=" display: flex; padding-top: 5px; gap: 20px; justify-content: center;">
+                            <p>MINUTES</p>
+                            <p>SECONDS</p>
+                            <p>M.SECONDS</p>
+                        </div>
+                        <!-- <button  onclick="stopWatch()">START</button> -->
+                       <div style="display: flex; justify-content: center; margin-top: 135px;">
+                            <button style="background-color: transparent; border: 0;" onclick="stopWatch()" id="repBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                                </svg>
+                            </button>
+                       </div>
+                        <div style="display: flex; justify-content: space-between; padding: 10px;">
+                            <button style="background-color: transparent; border: 0;" onclick="stopStop()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-pause-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"/>
+                                </svg>
+                            </button>
+                            <button style="background-color: transparent; border: 0;" onclick="resetWatch()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                  </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section style="width: 25%;">
+                    <div style="background-color: #9559cb; height: 10vh;"></div>
+                    <div style="background-color: white; height: 55vh;" >
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+
+                    </div>
+                </section>
+            </div>
+        </div>
     </section>
 
+   
 
 
     
@@ -31,6 +84,7 @@
 
     </center> -->
 
+   
     <script src="stopwatch.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
-/* body{
+body{
     background-image: url("stopwatch.webp");
     background-repeat: repeat;
     background-size: cover;
     min-height: 100vh;
-} */
+}
 div{
     padding-top: 300px;
 }
