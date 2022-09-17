@@ -21,7 +21,45 @@ const resetWatch =()=>{
     mySeconds.value = 0;
     myMinutes.value = 0
 }
+let allActivities = []
+if(localStorage.active){
+    allActivities = JSON.parse(localStorage.getItem("active"))
+}
+const saved =()=>{
+    let eachActivity = {
+        act: activity.value,
+        durat: duration.value,
+        others: optional.value
+    }
+    if((act = activity.value)  &&
+        (durat = duration.value) ||
+        (others = optional.value)){
+        allActivities.push(eachActivity),
 
+        activity.value = "",
+        duration.value = "",
+        optional.value = ""
+    }
+    localStorage.setItem("active",JSON.stringify(allActivities))
+}
+const search =()=>{
+    activitiesDashboard.innerHTML = `<section style="width: 100%;" id="activitiesDashboard">
+    <div style="background-color: #9559cb; height: 10vh;">
+        <h2 style="padding-top: 30px; text-align: center;">Activity Dashboard</h2>
+    </div>
+    <div style="background-color: white; height: 55vh;">
+       <div style="margin: auto; width: 80%; height: 40vh; background-color: #a79eda; padding-top: 60px;">
+            <input type="text" placeholder="active activty atm?" style="text-align: center;">
+            <input type="text" placeholder="duration used(min/secs/mm)" style="text-align: center;">
+            <input type="text" placeholder="more info- optional" style="text-align: center;">
+       </div>
+       <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <button>SAVED</button>
+            <button>SEARCH</button>
+       </div>
+    </div>
+</section>`
+}
 
 // const stopWatch =()=>{
 //     repBtn.innerHTML = `<button style="background-color: transparent; border: 0;" onclick="stopStop()"  id="secBtn">

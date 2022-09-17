@@ -15,7 +15,9 @@
         <div style="background-color: #7c4cc4; height: 85vh;">
             <div style="display: flex; justify-content: space-evenly; padding-top: 85px;">
                 <section style="width: 25%;">
-                    <div style="background-color: white; height: 10vh;"></div>
+                    <div style="background-color: white; height: 10vh;">
+                        <h2 style="padding-top: 30px; text-align: center;">Stop-Watch</h2>
+                    </div>
                     <div style="background-color: #9559cb; height: 55vh;">
                         <div style=" display: flex; padding-top: 100px; gap: 5px; justify-content: center;" id="newInput">
                             <input type="text" placeholder="00" disabled id="myMinutes">
@@ -29,7 +31,6 @@
                             <p>SECONDS</p>
                             <p>M.SECONDS</p>
                         </div>
-                        <!-- <button  onclick="stopWatch()">START</button> -->
                        <div style="display: flex; justify-content: center; margin-top: 135px;">
                             <button style="background-color: transparent; border: 0;" onclick="stopWatch()" id="repBtn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle" viewBox="0 0 16 16">
@@ -54,13 +55,20 @@
                         </div>
                     </div>
                 </section>
-                <section style="width: 25%;">
-                    <div style="background-color: #9559cb; height: 10vh;"></div>
-                    <div style="background-color: white; height: 55vh;" >
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-
+                <section style="width: 25%;" id="activitiesDashboard">
+                    <div style="background-color: #9559cb; height: 10vh;">
+                        <h2 style="padding-top: 30px; text-align: center;">Activity Dashboard</h2>
+                    </div>
+                    <div style="background-color: white; height: 55vh;">
+                       <div style="margin: auto; width: 80%; height: 20vh; background-color: #a79eda; padding-top: 60px;">
+                            <input type="text" id="activity" placeholder="active activty atm?" style="text-align: center;">
+                            <input type="text" id="duration" placeholder="duration used(min/secs/mm)" style="text-align: center;">
+                            <input type="text" id="optional" placeholder="more info- optional" style="text-align: center;">
+                       </div>
+                       <div style="display: flex; justify-content: center; margin-top: 20px;">
+                            <button onclick="saved()">SAVED</button>
+                            <button onclick="search()">SEARCH</button>
+                       </div>
                     </div>
                 </section>
             </div>
