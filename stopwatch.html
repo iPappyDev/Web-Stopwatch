@@ -50,7 +50,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
                                     <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-                                  </svg>
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -60,10 +60,15 @@
                         <h2 style="padding-top: 30px; text-align: center;">Activity Dashboard</h2>
                     </div>
                     <div style="background-color: white; height: 55vh;">
-                       <div style="margin: auto; width: 80%; height: 20vh; background-color: #a79eda; padding-top: 60px;">
-                            <input type="text" id="activity" placeholder="active activty atm?" style="text-align: center;">
-                            <input type="text" id="duration" placeholder="duration used(min/secs/mm)" style="text-align: center;">
-                            <input type="text" id="optional" placeholder="more info- optional" style="text-align: center;">
+                       <div style=" height: 40vh; background-color: #a79eda; padding-top: 60px;">
+                            <div style="margin: auto; width: 70%; display: grid; gap: 20px;">
+                                <label for="">Activity</label>
+                                <input type="text" id="activity" placeholder="activty atm?" style="text-align: center;">
+                                <label for="">Duration</label>
+                                <input type="text" id="duration" placeholder="min/secs/mm" style="text-align: center;">
+                                <label for="">Detailed Info</label>
+                                <input type="text" id="optional" placeholder="optional" style="text-align: center;">
+                                </div>
                        </div>
                        <div style="display: flex; justify-content: center; margin-top: 20px;">
                             <button onclick="saved()">SAVED</button>
